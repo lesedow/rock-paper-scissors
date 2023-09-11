@@ -1,7 +1,7 @@
-const availabeChoices = ['rock', 'paper', 'scissors']; 
+const availableChoices = ['rock', 'paper', 'scissors']; 
 
 function getCompChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
-    let compChoice = availabeChoices[randomNumber];
+    let compChoice = availableChoices[randomNumber];
     return compChoice;
 }
