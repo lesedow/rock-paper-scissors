@@ -1,14 +1,15 @@
-const availableChoices = ['rock', 'paper', 'scissors']; 
 let playerScore = 0;
 let compScore = 0;
 
 function getCompChoice() {
+    const availableChoices = ['rock', 'paper', 'scissors']; 
     let randomNumber = Math.floor(Math.random() * 3);
     let compChoice = availableChoices[randomNumber];
     return compChoice;
 }
 
-function playRound (computerChoice, playerChoice) {
+export function playRound (playerChoice) {
+    const computerChoice = getCompChoice();
     playerChoice = playerChoice.toLowerCase();
     let verdict = `${playerChoice} vs ${computerChoice} | `;
 
@@ -52,6 +53,9 @@ function playRound (computerChoice, playerChoice) {
         }
     }
 
-
     return verdict;
+}
+
+export function getScore () {
+    return { playerScore, compScore };
 }
