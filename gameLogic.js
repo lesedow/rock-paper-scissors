@@ -48,7 +48,7 @@ export function playRound (playerChoice) {
             verdict += 'You lose! Rock beats Scissors.';
             compScore++;
         } else {
-            verdict += 'You win! Paper beats Rock.';
+            verdict += 'You win! Scissors beats Paper.';
             playerScore++;
         }
     }
