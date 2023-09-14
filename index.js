@@ -13,11 +13,13 @@ function getPlayerChoice (event) {
 }
 
 function updateScore () {
-
+    const score = getScore();
+    scoreElement.textContent = `Player - ${score.playerScore}| Computer - ${score.compScore}`;
 }
 
 function setVerdict (verdict) {
     verdictElement.textContent = verdict;
+    updateScore();
 }
  
 gameContainer.addEventListener('click', getPlayerChoice);
