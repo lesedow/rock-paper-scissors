@@ -12,15 +12,6 @@ export function playRound (playerChoice) {
     const computerChoice = getCompChoice();
     playerChoice = playerChoice.toLowerCase();
     let verdict = `${playerChoice} vs ${computerChoice} | `;
-
-    if (
-        playerChoice !== 'rock' && 
-        playerChoice !== 'paper' && 
-        playerChoice !== 'scissors'
-    ) {
-        verdict = 'Your choice is invalid!';
-        return verdict;
-    }
      
     if (playerChoice === computerChoice) {
         verdict = `${playerChoice} vs ${computerChoice} | It's a draw!`;
